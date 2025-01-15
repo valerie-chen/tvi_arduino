@@ -11,7 +11,7 @@ String tagId = "None";
 byte nuidPICC[4];
 
 // Define the pin connected to SIG
-const int motorPin = 3;
+const int motorPin = 2;
 
 void setup(void) 
 {
@@ -43,7 +43,8 @@ void readNFC()
    tagId = tag.getUidString();
    if (!isVibrating) {
     isVibrating = true;
-    // vibrate();
+    vibrate();
+    // play_melody();
    }
    paint();
  }
